@@ -1,0 +1,19 @@
+name: Test self-hosted runner
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check runner
+      run: |
+        echo "Runner działa ✅"
+        hostname
+        whoami
+        uname -a
