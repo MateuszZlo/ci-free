@@ -1,17 +1,18 @@
-name: Test self-hosted runner
+name: CI - basic
 
 on:
-  workflow_dispatch:
   push:
+  workflow_dispatch:
 
 jobs:
-  test:
+  ci:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repo
+      uses: actions/checkout@v4
 
-    - name: Check runner
+    - name: Info
       run: |
         echo "Runner działa ✅"
         hostname
