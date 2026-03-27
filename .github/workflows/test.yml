@@ -18,3 +18,8 @@ jobs:
         hostname
         whoami
         uname -a
+        
+    - name: Inspect project
+      run: |
+        echo "Pliki w repo:"
+        ls -la
