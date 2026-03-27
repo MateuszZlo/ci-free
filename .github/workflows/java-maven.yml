@@ -1,0 +1,16 @@
+name: CI - Java Maven
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-java:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Build with Maven
+      run:
