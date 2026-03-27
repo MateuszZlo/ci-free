@@ -23,3 +23,7 @@ jobs:
       run: |
         echo "Pliki w repo:"
         ls -la
+    
+    - name: Build Java
+      run: |
+        mvn clean package
